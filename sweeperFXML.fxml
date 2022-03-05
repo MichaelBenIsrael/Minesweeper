@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mines.SweeperUI">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="188.0" spacing="10.0">
+               <children>
+                  <Label text="Progress:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="bar" prefWidth="200.0" progress="0.0">
+                     <padding>
+                        <Insets bottom="20.0" top="5.0" />
+                     </padding>
+                  </ProgressBar>
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="163.0" text="Reset">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <HBox prefHeight="47.0" prefWidth="176.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="label1" text="width">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Label>
+                        <TextField fx:id="widthInput" prefHeight="26.0" prefWidth="60.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="176.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="label2" text="height">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Label>
+                        <TextField fx:id="heightInput" prefHeight="26.0" prefWidth="60.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="176.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="label3" text="mines">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Label>
+                        <TextField fx:id="minesInput" prefHeight="26.0" prefWidth="60.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <StackPane fx:id="spane" prefWidth="258.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></StackPane>
+         </children>
+      </HBox>
+   </children>
+</StackPane>
